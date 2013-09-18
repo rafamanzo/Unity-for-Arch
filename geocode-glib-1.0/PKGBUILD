@@ -1,0 +1,28 @@
+# Maintainer: Rafael Reggiani Manzo <rr.manzo@gmail.com>
+
+_pkgname_prefix=geocode-glib
+_pkgname_sufix=1.0
+pkgname="$_pkgname_prefix-$_pkgname_sufix"
+pkgver=0.99.4
+pkgrel=100
+pkgdesc="Contains functions for geocoding and reverse geocoding using the OSM Nominatim APIs"
+arch=(any)
+license=(GPL)
+depends=(gnome-common)
+url="http://www.gnome.org"
+groups=(gnome)
+options=(!libtool)
+source=(https://git.gnome.org/browse/geocode-glib/snapshot/$_pkgname_prefix-$pkgver.tar.gz)
+sha512sums=('8183199af47ab85e83695a93cfbdc909d4d1920a95c6fa7a735274eb08e1f62240bd26d30af1284b2d8b2a0a72e9ef737f364096e4742f11530473264f577d6e')
+
+build() {
+  cd $_pkgname_prefix-$pkgver
+  ./autogen.sh --enable-introspection --enable-gtk-doc
+  ./configure --prefix=/usr --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/$pkgname --disable-static --with-gnome-distributor="Arch Linux"
+  make
+}
+
+package() {
+  cd $_pkgname_prefix-$pkgver
+  make DESTDIR="$pkgdir" install
+}

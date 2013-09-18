@@ -29,47 +29,48 @@ Order to compile/install:
 19: sni-qt                         -> Turns Qt tray icons into appindicators
 20: gsettings-desktop-schemas-ubuntu -> Shared GSettings schemas for the desktop
 21: gnome-desktop                  -> Library with common API for various GNOME modules
-22: gnome-settings-daemon-ubuntu   -> Daemon handling the GNOME session settings
-23: gnome-session-ubuntu           -> GNOME Session Manager
-24: gnome-screensaver-ubuntu       -> GNOME screen saver and locker
-25: gnome-control-center-ubuntu    -> Utilities to configure the GNOME desktop
-26: gnome-control-center-unity     -> Change some Unity settings with GCC
-27: credentials-preferences-ubuntu -> Ubuntu Online Accounts Settings Panel
-28: metacity-ubuntu                -> Window manager for GNOME
-29: libtimezonemap                 -> GTK+3 timezone map widget
-30: indicator-applet               -> GNOME panel indicator applet
-31: indicator-application          -> Takes menus and puts then in the panel
-32: indicator-appmenu              -> An indicator to host the menus from apps
-33: indicator-bluetooth            -> Indicator for bluetooth status
-34: indicator-datetime             -> A very, very simple clock
-35: indicator-power                -> Indicator to show battery information
-36: indicator-printers             -> Indicator showing active print jobs
-37: indicator-session              -> Indicator for session management
-38: indicator-sound                -> Indicator displaying a unified sound menu
-39: sphinxbase                     -> Base lib. for the Sphinx speech recog. sw.
-40: pocketsphinx                   -> Lightweight speech recognition system
-41: sphinx-voxforge-en             -> English Sphinx models built from Voxforge
-42: hud                            -> Backend for the Unity HUD
-43: network-manager-applet-ubuntu  -> NetworkManager applet w/indicator support
-44: overlay-scrollbar *            -> Overlay scrollbars for GTK 2 and GTK 3
-45: evemu                          -> Linux Evdev Event Emulation Library
-46: frame                          -> Open Input Framework Frame Library
-47: grail                          -> Gesture recognition and instantiation lib.
-48: geis                           -> Implementation of the GEIS interface
-49: nux                            -> An OpenGL toolkit
-50: unity-asset-pool               -> Design assets for Unity
-51: nautilus-ubuntu                -> File manager and graphics shell for GNOME
-52: libcolumbus                    -> Small, fast, error tolerant matcher
-53: unity-lens-applications        -> Unity applications lens
-54: unity-lens-files               -> Unity files lens
-55: unity-lens-music               -> Unity music lens
-56: unity-lens-photos              -> Unity photo lens
-57: unity-lens-video               -> Unity video lens
-58: unity-scope-home               -> Unity Home Scope
-59: unity-scopes                   -> Unity Smart Scopes
-60: compiz-ubuntu                  -> Compiz compositing window manager
-61: xpathselect                    -> Select tree objects using XPath queries
-62: unity                          -> Desktop shell designed for efficiency
+22: geocode-glib-1.0               -> Contains functions for geocoding and reverse geocoding using the OSM Nominatim APIs
+23: gnome-settings-daemon-ubuntu   -> Daemon handling the GNOME session settings
+24: gnome-session-ubuntu           -> GNOME Session Manager
+25: gnome-screensaver-ubuntu       -> GNOME screen saver and locker
+26: gnome-control-center-ubuntu    -> Utilities to configure the GNOME desktop
+27: gnome-control-center-unity     -> Change some Unity settings with GCC
+28: credentials-preferences-ubuntu -> Ubuntu Online Accounts Settings Panel
+29: metacity-ubuntu                -> Window manager for GNOME
+30: libtimezonemap                 -> GTK+3 timezone map widget
+31: indicator-applet               -> GNOME panel indicator applet
+32: indicator-application          -> Takes menus and puts then in the panel
+33: indicator-appmenu              -> An indicator to host the menus from apps
+34: indicator-bluetooth            -> Indicator for bluetooth status
+35: indicator-datetime             -> A very, very simple clock
+36: indicator-power                -> Indicator to show battery information
+37: indicator-printers             -> Indicator showing active print jobs
+38: indicator-session              -> Indicator for session management
+39: indicator-sound                -> Indicator displaying a unified sound menu
+40: sphinxbase                     -> Base lib. for the Sphinx speech recog. sw.
+41: pocketsphinx                   -> Lightweight speech recognition system
+42: sphinx-voxforge-en             -> English Sphinx models built from Voxforge
+43: hud                            -> Backend for the Unity HUD
+44: network-manager-applet-ubuntu  -> NetworkManager applet w/indicator support
+45: overlay-scrollbar *            -> Overlay scrollbars for GTK 2 and GTK 3
+46: evemu                          -> Linux Evdev Event Emulation Library
+47: frame                          -> Open Input Framework Frame Library
+48: grail                          -> Gesture recognition and instantiation lib.
+49: geis                           -> Implementation of the GEIS interface
+50: nux                            -> An OpenGL toolkit
+51: unity-asset-pool               -> Design assets for Unity
+52: nautilus-ubuntu                -> File manager and graphics shell for GNOME
+53: libcolumbus                    -> Small, fast, error tolerant matcher
+54: unity-lens-applications        -> Unity applications lens
+55: unity-lens-files               -> Unity files lens
+56: unity-lens-music               -> Unity music lens
+57: unity-lens-photos              -> Unity photo lens
+58: unity-lens-video               -> Unity video lens
+59: unity-scope-home               -> Unity Home Scope
+60: unity-scopes                   -> Unity Smart Scopes
+61: compiz-ubuntu                  -> Compiz compositing window manager
+62: xpathselect                    -> Select tree objects using XPath queries
+63: unity                          -> Desktop shell designed for efficiency
 
 * Optional packages
 
