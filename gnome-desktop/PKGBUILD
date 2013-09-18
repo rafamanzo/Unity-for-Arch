@@ -1,0 +1,32 @@
+# Copied from the previous version at:
+# https://www.archlinux.org/packages/extra/x86_64/gnome-desktop/
+#
+# Maintainer: Rafael Reggiani Manzo <rr.manzo@gmail.com>
+# Official Package Maintainer:  Jan de Groot <jan@archlinux.org>
+
+pkgname=gnome-desktop
+pkgver=3.9.92
+pkgrel=100
+pkgdesc="Library with common API for various GNOME modules"
+arch=(i686 x86_64)
+license=(GPL LGPL)
+depends=(gsettings-desktop-schemas gtk3 libxkbfile xkeyboard-config iso-codes)
+makedepends=(intltool gobject-introspection itstool)
+url="http://www.gnome.org"
+groups=(gnome)
+options=(!libtool)
+source=(http://ftp.gnome.org/pub/gnome/sources/$pkgname/${pkgver::3}/$pkgname-$pkgver.tar.xz)
+sha512sums=('73834661ad7d8e39672fdb54d90ff95229d3a8f311f33d05fb1b2238dc87dc49b9f99d2ac8306dca4ed3e7e568d35ac599245cd0845ba1f9d5c5484cc6001a65')
+
+build() {
+  cd $pkgname-$pkgver
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    --libexecdir=/usr/lib/$pkgname --disable-static \
+    --with-gnome-distributor="Arch Linux"
+  make
+}
+
+package() {
+  cd $pkgname-$pkgver
+  make DESTDIR="$pkgdir" install
+}
