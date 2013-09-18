@@ -4,10 +4,10 @@
 # Contributor: Adam Hani Schakaki (krzd) <krzd@krzd.net>
 
 pkgname=gsettings-desktop-schemas-ubuntu
-_ubuntu_rel=1ubuntu1
-_ubuntu_ver=3.8.0
-pkgver=3.8.2
-pkgrel=103
+_ubuntu_rel=0ubuntu1~saucy1
+_ubuntu_ver=3.9.91
+pkgver=3.9.91
+pkgrel=100
 pkgdesc="Shared GSettings schemas for the desktop"
 arch=('any')
 url="http://live.gnome.org/"
@@ -18,9 +18,9 @@ provides=("${pkgname%-*}=${pkgver}")
 conflicts=("${pkgname%-*}")
 install=${pkgname%-*}.install
 source=("http://ftp.gnome.org/pub/gnome/sources/${pkgname%-*}/${pkgver%.*}/${pkgname%-*}-${pkgver}.tar.xz"
-        "https://launchpad.net/ubuntu/+archive/primary/+files/gsettings-desktop-schemas_${_ubuntu_ver}-${_ubuntu_rel}.debian.tar.gz")
-sha512sums=('a5ee37f5e0c6c80fee50b9ac79f417f61a88c05e996493a081ad1c5c3ef8ccd2f71be93c93ecf01aa0a3de612245ea2fe58de5281ba1417b1d83ba098568232c'
-            'c89f5e3fd3850cfa5e005c23f57302331728af7b35f0f0ea9e827f8245ad14a74731a7c05238af46c61a4759a70a1697d6f8591b3cf2f9ad131bc6b42aad5899')
+        "https://launchpad.net/~gnome3-team/+archive/gnome3-staging/+files//gsettings-desktop-schemas_${_ubuntu_ver}-${_ubuntu_rel}.debian.tar.gz")
+sha512sums=('6f72a7037aaec9ac91952d0acceaa53160e17641b0efac889e447dddb76571664ddbe40617f82cbb4a3466bcceed084fec67f4f4ce2b6916d7a57a6b970f2672'
+            'bb50ed4fb666027f1c18df3f2b8f664c91ad479baa7d4ce34f33531d62095ad0cca44521d01665c498dd226a1265e57f5b320ce160715b13e569ce022e1fe15c')
 
 prepare() {
   cd "${srcdir}/${pkgname%-*}-${pkgver}"
