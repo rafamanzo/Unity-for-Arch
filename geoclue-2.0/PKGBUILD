@@ -1,0 +1,41 @@
+# Maintainer: Rafael Reggiani Manzo <rr.manzo@gmail.com>
+
+_pkgname_prefix=geoclue
+_pkgname_sufix=2.0
+pkgname=$_pkgname_prefix-$_pkgname_sufix
+_ppa_rel=0ubuntu1~saucy1
+pkgver=1.99.3
+pkgrel=100
+pkgdesc="GeoClue is a D-Bus geoinformation service"
+arch=(any)
+license=(GPL)
+url="http://www.gnome.org"
+groups=(gnome)
+source=("https://launchpad.net/~gnome3-team/+archive/gnome3-staging/+files/${pkgname}_${pkgver}.orig.tar.xz"
+        "https://launchpad.net/~gnome3-team/+archive/gnome3-staging/+files/${pkgname}_${pkgver}-${_ppa_rel}.debian.tar.gz")
+sha512sums=('7be33e846669e2c2054598dbfd870ae04c0091f2240aeee9269693696ce7408912b808e624422863dae54d7a1157775094ee354bb2717c396d992ea9add83159'
+            '54da2f6765fc6a0f708d02eb2764acd6781cbedceb7319eef1902f40c8dcfbe3bf5e1b3b199c93487331c8517d64147f7642e8c60a6382baf2944a47f457bdb9')
+
+prepare() {
+  cd $srcdir/$_pkgname_prefix-$pkgver
+
+  for i in $(grep -v '#' "${srcdir}/debian/patches/series"); do
+    msg "Applying patch ${i} ..."
+    patch -p1 -i "${srcdir}/debian/patches/${i}"
+  done
+}
+
+build() {
+  cd $srcdir/$_pkgname_prefix-$pkgver
+
+  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    --libexecdir=/usr/lib/$pkgname --disable-static \
+    --with-gnome-distributor="Arch Linux"
+
+  make
+}
+
+package() {
+  cd $srcdir/$_pkgname_prefix-$pkgver
+  make DESTDIR="$pkgdir" install
+}
